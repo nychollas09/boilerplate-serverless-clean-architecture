@@ -1,5 +1,5 @@
 import { PeopleController } from '@/application/controllers'
-import { adaptServerlessLambdaRoute } from '@/infrastructure/adapters'
+import { adaptServerlessLambdaRoute } from '@/infrastructure/adapters/aws'
 
 export const handle = (args: { [key: string]: any }) =>
   adaptServerlessLambdaRoute(new PeopleController(), {
