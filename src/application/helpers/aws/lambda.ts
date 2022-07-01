@@ -8,7 +8,7 @@ export type LambdaEvent = {
     path: string
     requestId: string
   }
-  body: string
+  body: { [key: string]: any }
 }
 
 export type LambdaContext = {

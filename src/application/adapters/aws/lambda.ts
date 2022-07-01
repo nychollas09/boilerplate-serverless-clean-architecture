@@ -5,7 +5,7 @@ export const adaptLambdaArgsToHttpRequest = ({
   event
 }: LambdaArgs): HttpRequest => {
   return {
-    body: event.body,
+    body: event?.body,
     fullPath: event.requestContext.path,
     headers: event.headers,
     method: event.httpMethod,
